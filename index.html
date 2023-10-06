@@ -1,0 +1,2722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            height: max-content;
+            width: 100%;
+            background-color: rgb(30, 31, 41);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .child1 {
+            height: 40px;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+            margin-top: 20px;
+        
+
+        }
+
+        .child2 {
+            height: 40px;
+            width: 20%;
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .one {
+            height: 100%;
+            width: 30%;
+
+        }
+
+        .two {
+            height: 100%;
+            width: 30%;
+
+        }
+
+        .three {
+            height: 100%;
+            width: max-content;
+        }
+
+        .four {
+            color: white;
+            font-size: 75%;
+        }
+
+        .five {
+            height: 100%;
+            width: 30%;
+
+        }
+
+        .six {
+            height: 100%;
+            width: 50%;
+
+        }
+
+        .section1 {
+            height: 100px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+            width: 15%;
+            margin-left: 60px;
+            background-image: url(./images/logo.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .searchbar {
+            height: 40px;
+            width: 42%;
+            border-radius: 20px;
+            display: flex;
+        }
+
+        .text {
+            height: 39px;
+            width: 62%;
+            background-color: white;
+            border: none;
+            font-size: 100%;
+            padding-left: 20px;
+            margin-left: -4px;
+        }
+
+        .new {
+            height: 40px;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+            font-size: 100%;
+            color: rgba(0, 0, 0, 0.582);
+            padding: 10px;
+
+        }
+        
+
+        .new1 {
+            height: 40px;
+            width: 18%;
+            background-color: red;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .new2 {
+            color: white;
+            font-weight: bold;
+        }
+
+        .icons {
+            height: 70px;
+            width: 200px;
+            margin-right: 50px;
+            display: flex;
+        }
+
+        .icon1 {
+            height: 100%;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .red {
+            height: 18px;
+            width: 18px;
+            border-radius: 100%;
+            background-color: red;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80%;
+        }
+
+        .icon2 {
+            height: 100%;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-left: 30px;
+        }
+
+        .heart {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .white {
+            color: white;
+            font-size: 80%;
+        }
+
+        .borderbottom {
+            width: 100%;
+            border-bottom: 3px solid red;
+        }
+
+        .section2 {
+            height: max-content;
+            width: 100%;
+            background-color: white;
+        }
+
+        .bar {
+            height: max-content;
+            width: 100%;
+        }
+
+        .navul {
+            height: 60px;
+            width: 70%;
+            margin-left: 40px;
+            cursor: pointer;
+            transition: .34s;
+
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .one1 {
+            color: rgb(200, 7, 7);
+            position: relative;
+        }
+
+        .dropdown {
+            height: 2px;
+            width: 100%;
+            background-color: rgb(200, 7, 7);
+            position: absolute;
+        }
+
+        .list {
+            list-style: none;
+            position: relative;
+            cursor: pointer;
+            transition: .34s;
+        }
+
+        .dropdown1 {
+            position: absolute;
+            height: 2px;
+            transition: .34s;
+            width: 0;
+        }
+
+        .list:hover .dropdown1 {
+            background-color: rgb(200, 7, 7);
+            width: 100%;
+        }
+
+        .border {
+            width: 100%;
+            border: 1px solid rgba(128, 128, 128, 0.517);
+        }
+
+        .images {
+            height: max-content;
+            width: 93%;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-around;
+            overflow: hidden;
+        }
+
+        .six1 {
+            height: 230px;
+            width: 28%;
+            background-color: rgb(228, 231, 237);
+            position: relative;
+        }
+
+        .six2 {
+            height: 230px;
+            width: 28%;
+            background-color: rgb(228, 231, 237);
+            position: relative;
+        }
+
+        .six3 {
+            height: 230px;
+            width: 28%;
+            background-color: rgb(228, 231, 237);
+            position: relative;
+        }
+
+        .pic:hover {
+            transform: scale(1.1);
+        }
+
+        .pic {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: .34s;
+        }
+
+        .six12 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            clip-path: polygon(0 0, 100% 0, 27% 100%, 0% 100%);
+            background-color: rgba(190, 4, 41, 0.905);
+        }
+
+        .six13 {
+            color: white;
+            margin-left: 30px;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: .34s;
+        }
+
+        .six14 {
+            color: white;
+            margin-left: 30px;
+            margin-top: 10px;
+            font-size: 90%;
+        }
+
+        .six15 {
+            height: 100%;
+            width: 90%;
+            margin-top: 20px;
+            margin-left: 5%;
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid; */
+        }
+
+        .six16 {
+            height: 60px;
+            width: max-content;
+            /* border: 1px solid blue; */
+            display: flex;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.798);
+            margin-left: 10%;
+        }
+
+        .six17 {
+            height: 60px;
+            width: 50%;
+            /* border: 1px solid red; */
+            color: rgba(128, 128, 128, 0.85);
+            font-weight: bold;
+            font-size: 95%;
+            margin-left: 10%;
+        }
+
+        .animation {
+            height: 600px;
+            width: 90%;
+            margin-left: 7%;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .slider {
+            height: 550px;
+            width: 200%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            animation: fade 15s linear infinite;
+            transition: all linear 0.34s;
+        }
+
+        @keyframes fade {
+            0% {
+                left: 0;
+            }
+
+            16% {
+                left: 0;
+            }
+
+            17% {
+                left: -25%;
+            }
+
+            32% {
+                left: -25%;
+            }
+
+            33% {
+                left: -50%;
+            }
+
+            48% {
+                left: -50%;
+            }
+
+            49% {
+                left: -75%;
+            }
+
+            64% {
+                left: -75%;
+            }
+
+            65% {
+                left: -100%;
+            }
+
+            100% {
+                left: -100%;
+            }
+
+        }
+
+        .slide {
+            height: 90%;
+            width: 11.5%;
+            border: 1px solid rgba(128, 128, 128, 0.673);
+            margin-left: 1%;
+            background-color: white;
+            position: relative;
+            transition: all linear 0.34s;
+        }
+
+        .slider :nth-child(1) {
+            margin-left: 0;
+        }
+
+        .ten1 {
+            height: 280px;
+            width: 100%;
+        }
+
+        .ten2 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .ten3 {
+            text-align: center;
+            color: rgba(128, 128, 128, 0.755);
+            font-size: 90%;
+            margin-top: 10px;
+        }
+
+        .ten4 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .ten5 {
+            margin-left: 60px;
+        }
+
+        .ten6 {
+            color: #cb0505;
+            font-size: 130%;
+        }
+
+        .ten7 {
+            height: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ten8 {
+            border-bottom: 2px solid rgba(128, 128, 128, 0.47);
+            width: 30%;
+        }
+
+        .ten9 {
+            height: 20px;
+            width: 30%;
+            margin-top: 15px;
+            display: flex;
+        }
+
+        .star {
+            height: 100%;
+            width: 20%;
+        }
+
+        .star1 {
+            font-size: 80%;
+        }
+
+        .ten10 {
+            border-bottom: 2px solid rgba(128, 128, 128, 0.47);
+            width: 30%;
+
+        }
+
+        .ten11 {
+            height: 30px;
+            width: 60%;
+            margin-left: 50px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .ten12 {
+            height: 30px;
+            width: 18%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .slidedrop {
+            height: 50px;
+            width: 100%;
+            position: absolute;
+            background-color: black;
+            bottom: 0;
+            visibility: hidden;
+            transition: all linear 0.34s;
+            z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide:hover {
+            border: 2px solid red;
+        }
+
+        .slide:hover .slidedrop {
+            bottom: -50px;
+            visibility: visible;
+            z-index: -1;
+        }
+
+        .ten15 {
+            height: 30px;
+            width: 90%;
+            border-radius: 20px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ten16 {
+            color: white;
+            font-weight: bold;
+        }
+
+        .ten17 {
+            height: 60vh;
+            width: 100%;
+            margin-top: 30px;
+            background-image: url(./images/hotdeal.png);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ten18 {
+            height: 100%;
+            width: 60%;
+        }
+
+        .ten19 {
+            height: max-content;
+            margin-top: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .ten20 {
+            height: 100px !important;
+            width: 100px !important;
+            background-color: rgb(211, 23, 55);
+            border-radius: 50%;
+        }
+
+        .ten21 {
+            color: white;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .ten22 {
+            color: white;
+            text-align: center;
+            font-size: 80%;
+        }
+
+        .ten28 {
+            height: max-content;
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ten23 {
+            font-size: 30px;
+        }
+
+        .ten29 {
+            height: max-content;
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ten24 {
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.858);
+        }
+
+        .ten27 {
+            height: max-content;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ten25 {
+            height: 40px;
+            width: 150px;
+            background-color: rgb(209, 0, 36);
+            border-radius: 20px;
+            padding: 1px;
+            cursor: pointer;
+        }
+
+        .ten26 {
+            text-align: center;
+            color: white;
+            margin-top: 12px;
+            font-weight: bold;
+            font-size: 90%;
+        }
+
+        .section4 {
+            height: max-content;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+
+        .layout1 {
+            height: 400px;
+            width: 25%;
+            margin-left: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slidder1 {
+            height: 100%;
+            width: 200%;
+            animation: black 4s linear infinite;
+            position: absolute;
+            display: flex;
+        }
+
+        @keyframes black {
+            0% {
+                margin-left: 0;
+            }
+
+            50% {
+                margin-left: 0;
+            }
+
+            55% {
+                margin-left: -100%;
+            }
+
+            100% {
+                margin-left: -100%;
+            }
+        }
+
+        .sliddes {
+            height: 100%;
+            width: 50%;
+            transition: all linear 0.34s;
+        }
+
+        .box {
+            height: max-content;
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+
+        }
+
+        .box1 {
+            height: 60px;
+            width: 20%;
+            background-image: url(./images/product07.png);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .box12 {
+            height: 60px;
+            width: 20%;
+            background-image: url(./images/product03.png);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .box13 {
+            height: 60px;
+            width: 20%;
+            background-image: url(./images/product05.png);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .box2 {
+            height: 100px;
+            width: max-content;
+        }
+
+        .tex1 {
+            font-size: 75%;
+            color: rgba(128, 128, 128, 0.825);
+        }
+
+        .tex2 {
+            font-size: 80%;
+            margin-top: 10px;
+            padding-bottom: 10px;
+            color: rgba(0, 0, 0, 0.772);
+
+        }
+
+        .tex3 {
+            color: rgba(128, 128, 128, 0.815);
+            font-size: 80%;
+        }
+
+        .tex4 {
+            color: rgb(200, 7, 7);
+            font-size: 120%;
+        }
+
+        .layout2 {
+            height: 400px;
+            width: 25%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .layout3 {
+            height: 400px;
+            width: 25%;
+            margin-right: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .for1 {
+            width: 100%;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.759);
+        }
+
+        .for2 {
+            height: 200px;
+            width: 100%;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+
+        .for7 {
+            height: 100%;
+            width: 40%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .for3 {
+            height: max-content;
+            width: max-content;
+        }
+
+        .for4 {
+            height: 40px;
+            width: 95%;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .for8 {
+            height: 100%;
+            width: 75%;
+            position: absolute;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+            border: 1px solid rgba(128, 128, 128, 0.739);
+            padding: 15px;
+            font-size: 95%;
+        }
+
+        .for9 {
+            height: 100%;
+            width: 35%;
+            background-color: #b90404;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            position: absolute;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .for10 {
+            color: white;
+        }
+
+        .for5 {
+            height: 30px;
+            width: 30%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .for11 {
+            height: 100%;
+            width: 20%;
+            background-color: white;
+            border: 1px solid rgba(128, 128, 128, 0.675);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .for6 {
+            font-size: 25px;
+            width: max-content;
+        }
+
+        .for12 {
+            width: 100%;
+            border-bottom: 2px solid rgb(200, 7, 7);
+        }
+
+        .for13 {
+            height: 500px;
+            width: 100%;
+            border: 1px solid;
+        }
+
+        .for14 {
+            height: 320px;
+            width: 100%;
+            background-color: rgb(21, 22, 29);
+            display: flex;
+            align-items: center;
+        }
+
+        .for20 {
+            height: max-content;
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 40px;
+        }
+
+        .for16 {
+            height: 260px;
+            width: 30%;
+
+        }
+
+        .for17 {
+            height: 260px;
+            width: 20%;
+        }
+
+        .for18 {
+            height: 260px;
+            width: 20%;
+        }
+
+        .for19 {
+            height: 260px;
+            width: 20%;
+        }
+
+        .for15 {
+            height: 180px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .for27 {
+            position: absolute;
+            background-color: rgba(0, 0, 13, 0.881);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 30px;
+        }
+
+        .for26 {
+            height: 40px;
+            width: 20%;
+            background-image: url(https://cdn.cssauthor.com/wp-content/uploads/2023/02/Essential-Minimal-Payment-Icons.jpg?strip=all&lossy=1&resize=1000%2C500&ssl=1);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .for21 {
+            color: white;
+            font-size: 20px;
+        }
+
+        .for22 {
+            color: rgb(185, 186, 188);
+            margin-top: 30px;
+            font-size: 100%;
+        }
+
+        .for23 {
+            height: 30px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .for24 {
+            color: rgb(185, 186, 188);
+            font-size: 90%;
+            margin-top: 10px;
+        }
+
+        .for25 {
+            color: rgb(185, 186, 188);
+            font-size: 90%;
+            list-style: none;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .for25:hover {
+            color: #b90404;
+        }
+
+        .for28 {
+            height: max-content;
+            width: max-content;
+        }
+
+        .for29 {
+            color: rgb(185, 186, 188);
+            font-size: 80%;
+
+        }
+
+        .for30 {
+            color: rgba(255, 255, 255, 0.037);
+            cursor: pointer;
+        }
+
+        .for30:hover {
+            color: rgb(200, 7, 7);
+        }
+
+
+        /* ...////// media queries////.... */
+
+        @media screen and (max-width:990px) {
+            .navbar {
+                display: block;
+            }
+
+            .child1 {
+                margin-left: 60px;
+                width: 90%;
+            }
+
+            .child2 {
+                margin-left: 60px;
+                width: 30%;
+            }
+
+            .section1 {
+                display: block;
+                height: 250px;
+            }
+
+            .logo {
+                margin: auto;
+                width: 20%;
+            }
+
+            .searchbar {
+                margin: auto;
+                width: 75%;
+                margin-top: 20px;
+            }
+
+            .icons {
+                position: absolute;
+                right: 0;
+                margin-top: 30px;
+            }
+
+            .bar {
+                display: none;
+            }
+
+            .images {
+                display: block;
+            }
+
+            .six1 {
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 5%;
+                width: 45%;
+            }
+
+            .six2 {
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 10px;
+                width: 45%;
+            }
+
+            .six3 {
+                width: 45%;
+                margin-left: 5%;
+                margin-top: 20px;
+
+            }
+
+            .six16 {
+                width: max-content;
+                margin-left: 30px;
+            }
+
+            .six17 {
+                width: 60%;
+                margin-left: 30px;
+            }
+
+            .slider {
+                width: 400%;
+                height: 100vh;
+                animation: fade1 15s linear infinite !important;
+            }
+
+            .ten17 {
+                height: 80vh;
+            }
+
+            @keyframes fade1 {
+                0% {
+                    left: 0;
+                }
+
+                20% {
+                    left: 0;
+                }
+
+                21% {
+                    left: -50%;
+                }
+
+                40% {
+                    left: -50%;
+
+                }
+
+                41% {
+                    left: -100%;
+                }
+
+                60% {
+                    left: -100%;
+                }
+
+                61% {
+                    left: -150%;
+                }
+
+                80% {
+                    left: -150%;
+                }
+
+                81% {
+                    left: -200%;
+                }
+
+                100% {
+                    left: -200%;
+                }
+
+
+            }
+
+            .section4 {
+                display: block;
+            }
+
+            .layout1 {
+                display: inline-block;
+                vertical-align: top;
+                width: 40%;
+                margin-left: 50px;
+            }
+
+            .layout2 {
+                display: inline-block;
+                vertical-align: top;
+                width: 40%;
+            }
+
+            .layout3 {
+                width: 40%;
+                margin-left: 50px;
+                margin-top: 20px;
+
+            }
+
+            .for14 {
+                height: max-content;
+            }
+
+            .for20 {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+
+            .for16 {
+                width: 45%;
+                margin-top: 30px;
+            }
+
+            .for17 {
+                width: 45%;
+                margin-top: 30px;
+            }
+
+            .for18 {
+                width: 45%;
+            }
+
+            .for19 {
+                width: 45%;
+            }
+
+            .for7 {
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width:760px) {
+            .six15 {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width:585px) {
+            .child1 {
+                margin-left: 0;
+
+            }
+
+            .child2 {
+                width: 40%;
+                margin-left: 0;
+            }
+
+            .layout1 {
+                margin-left: 0;
+            }
+
+            .layout2 {
+                margin-left: 0;
+            }
+
+            .layout3 {
+                margin-left: 0;
+            }
+
+        }
+
+        @media screen and (max-width:560px) {
+            .images {
+                width: 100%;
+            }
+
+            .six1 {
+                margin-left: 0;
+            }
+
+            .six3 {
+                margin-left: 0;
+            }
+
+            .slide {
+                height: auto;
+            }
+        }
+
+        @media screen and (max-width:490px) {
+            .six1 {
+                height: 180px;
+                margin-left: 20px;
+            }
+
+            .six2 {
+                height: 180px;
+            }
+
+            .six3 {
+                margin-left: 20px;
+                height: 180px;
+            }
+
+            .six17 {
+                width: 90%;
+                margin: auto;
+            }
+
+            .slide {
+                height: auto;
+            }
+
+            .ten18 {
+                width: 90%;
+            }
+
+            .layout1 {
+                width: 95%;
+                margin-left: 20px;
+            }
+
+            .layout2 {
+                width: 95%;
+                margin-left: 20px;
+            }
+
+            .layout3 {
+                width: 95%;
+                margin-left: 20px;
+            }
+
+            .for7 {
+                width: 90%;
+
+            }
+
+            .for16 {
+                width: 95%;
+            }
+
+            .for17 {
+                width: 95%;
+            }
+
+            .for18 {
+                width: 95%;
+            }
+
+            .for19 {
+                width: 95%;
+            }
+
+            .logo {
+                width: 30%;
+            }
+
+            .ten19 {
+                width: 90%;
+            }
+
+        }
+
+        @media screen and (max-width:480px) {
+            .searchbar {
+                width: 90%;
+            }
+
+            .six1 {
+                width: 90%;
+                margin-left: 5%;
+                height: 280px;
+            }
+
+            .six2 {
+                width: 90%;
+                margin-left: 5%;
+                height: 280px;
+                margin-top: 20px;
+            }
+
+            .six3 {
+                width: 90%;
+                margin-left: 5%;
+                height: 280px;
+                margin-top: 20px;
+            }
+
+            .ten19 {
+                width: 90%;
+                display: flex;
+                flex-wrap: wrap;
+                margin: auto;
+            }
+
+            .ten20 {
+                margin-top: 10px;
+            }
+
+            .slide {
+                width: 100%;
+
+            }
+
+         .slider {
+                width: 800% !important;
+                height: 100vh;
+                animation: Fady 15s linear infinite !important;
+            }
+
+            .ten17 {
+                height: 80vh;
+            }
+
+           @keyframes Fady {
+                0% {
+                    left: 0;
+                }
+
+                20% {
+                    left: 0;
+                }
+
+                21% {
+                    left: -100%;
+                }
+
+                40% {
+                    left: -100%;
+
+                }
+
+                41% {
+                    left: -200%;
+                }
+
+                60% {
+                    left: -200%;
+                }
+
+                61% {
+                    left: -300%;
+                }
+
+                80% {
+                    left: -300%;
+                }
+
+                81% {
+                    left: -400%;
+                }
+
+                100% {
+                    left: -400%;
+                }
+
+
+            }
+
+        }
+        @media screen and (max-width:435px) {
+            .child1 {
+                width: max-content;
+                height: max-content;
+                flex-wrap: wrap;
+                display: flex;
+            }
+
+            .child2 {
+                height: max-content;
+            }
+
+            .two {
+                width: max-content;
+                margin-left: 30px;
+            }
+        }
+
+        @media screen and (max-width:370px) {
+            .logo {
+                width: 40%;
+            }
+
+            .searchbar {
+                width: 80%;
+            }
+
+            .main {
+                flex-wrap: wrap;
+                display: flex;
+            }
+        }
+
+        .ten23 {
+            width: 80%;
+            text-align: center;
+        }
+
+        .ten24 {
+            width: 90%;
+            font-size: 23px;
+            text-align: center;
+        }
+
+        .ten17 {
+            height: max-content;
+            padding-bottom: 20px;
+            padding-top: 30px;
+        }
+
+        .for27 {
+            text-align: center;
+        }
+
+        @media screen and (max-width:360px) {
+            .child1 {
+                width: 50%;
+            }
+
+            .for6 {
+                width: max-content;
+                font-size: 15px;
+                text-align: center;
+            }
+
+            .for10 {
+                font-size: 80%;
+            }
+
+            .for16 {
+                font-size: 80%;
+                margin-left: 0;
+            }
+
+            .for20 {
+                margin-left: 0;
+                font-size: 80%;
+            }
+
+            .searchbar {
+                width: 80%;
+                font-size: 80%;
+                margin-left: 30px;
+
+
+            }
+
+            .layout1 {
+                margin-left: 0;
+            }
+
+            .layout2 {
+                margin-left: 0;
+            }
+
+            .layout3 {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width:350px) {
+            .child1 {
+                width: 90%;
+            }
+
+            .child2 {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width:340px) {
+            .child1 {
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .one {
+                width: max-content;
+            }
+
+            .two {
+                width: max-content;
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width:290px) {
+            .child1 {
+                width: 60%;
+            }
+
+            .child2 {
+                width: 60%;
+            }
+
+            .logo {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="child1">
+            <div class="one">
+                <span class="four"><i class="fa-solid fa-phone" style="color: #f70202;"></i>+021-95-51-84</span>
+            </div>
+            <div class="two">
+                <span class="four"><i class="fa-solid fa-envelope" style="color: #ff0000;"></i> email@email.com</span>
+            </div>
+            <div class="three">
+                <span class="four"><i class="fa-solid fa-location-dot" style="color: #ff0000;"></i> 1734 Stonecoal
+                    Road</span>
+            </div>
+        </div>
+        <div class="child2">
+            <div class="five">
+                <span class="four"><i class="fa-solid fa-dollar-sign" style="color: #ff0000;"></i>USD</span>
+            </div>
+            <div class="six">
+                <span class="four"><i class="fa-solid fa-user" style="color: #ff0505;"></i>My Account</span>
+            </div>
+        </div>
+    </div>
+    <div class="section1">
+        <div class="logo"></div>
+        <div class="searchbar">
+            <select class="new" id="">
+                <option value="">All Category</option>
+                <option value=""> Category 01</option>
+                <option value=""> Category 02</option>
+            </select>
+            <input class="text" type="text" placeholder="Search here">
+            <div class="new1">
+                <p class="new2">Search</p>
+            </div>
+        </div>
+        <div class="icons">
+            <div class="icon1">
+                <i class="fa-regular fa-heart heart" style="color: #ffffff;"></i>
+                <div class="red">2</div>
+                <p class="white">Your Wishlist</p>
+            </div>
+            <div class="icon2">
+                <i class="fa-solid fa-cart-shopping heart" style="color: #f7f7f8;"></i>
+                <div class="red">3</div>
+                <p class="white">Your Cart</p>
+            </div>
+        </div>
+    </div>
+    <div class="borderbottom"></div>
+    <div class="section2">
+        <div class="bar">
+            <div class="navul">
+                <ul class="main">
+                    <li class="list one1">Home
+                        <div class="dropdown"></div>
+                    </li>
+                    <li class="list">Hot Deals
+                        <div class="dropdown1"></div>
+                    </li>
+                    <li class="list">Categories
+                        <div class="dropdown1"></div>
+                    </li>
+                    <li class="list">Laptops
+                        <div class="dropdown1"></div>
+                    </li>
+                    <li class="list">Smartphones
+                        <div class="dropdown1"></div>
+                    </li>
+                    <li class="list">Cameras
+                        <div class="dropdown1"></div>
+                    </li>
+                    <li class="list">Accessories
+                        <div class="dropdown1"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="border"></div>
+    <div class="images">
+        <div class="six1">
+            <img class="pic" src="./images/shop01.png" alt="">
+            <div class="six12">
+                <h2 class="six13">Laptop <br>Collection</h2>
+                <p class="six14">SHOP NOW <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i> </p>
+            </div>
+        </div>
+        <div class="six2">
+            <img class="pic" src="./images/shop03.png" alt="">
+            <div class="six12">
+                <h2 class="six13">Accessories <br>Collection</h2>
+                <p class="six14">SHOP NOW <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i> </p>
+            </div>
+        </div>
+        <div class="six3">
+            <img class="pic" src="./images/shop02.png" alt="">
+            <div class="six12">
+                <h2 class="six13">Cameras <br>Collection</h2>
+                <p class="six14">SHOP NOW <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i> </p>
+            </div>
+        </div>
+    </div>
+    <div class="six15">
+        <div class="six16">
+            <h2>NEW PRODUCTS</h2>
+        </div>
+        <div class="six17">
+            <ul class="main">
+                <li class="list one1">Laptops
+                    <div class="dropdown"></div>
+                </li>
+                <li class="list">Smartphones
+                    <div class="dropdown1"></div>
+                </li>
+                <li class="list">Cameras
+                    <div class="dropdown1"></div>
+                </li>
+                <li class="list">Accessories
+                    <div class="dropdown1"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="animation">
+        <div class="slider">
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product01.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product02.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product03.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product04.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product05.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product06.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product07.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product08.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ten17">
+        <div class="ten18">
+            <div class="ten19">
+                <div class="ten20">
+                    <h2 class="ten21">02</h2>
+                    <p class="ten22">DAYS</p>
+                </div>
+                <div class="ten20">
+                    <h2 class="ten21">10</h2>
+                    <p class="ten22">HOURS</p>
+                </div>
+                <div class="ten20">
+                    <h2 class="ten21">34</h2>
+                    <p class="ten22">MINS</p>
+                </div>
+                <div class="ten20">
+                    <h2 class="ten21">60</h2>
+                    <p class="ten22">SECS</p>
+                </div>
+
+            </div>
+            <div class="ten28">
+                <h2 class="ten23">HOT DEAL THIS WEEK</h2>
+            </div>
+            <div class="ten29">
+                <p class="ten24">NEW COLLECTION UP TO 50% OFF</p>
+            </div>
+
+            <div class="ten27">
+                <div class="ten25">
+                    <p class="ten26">SHOP NOW</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="six15">
+        <div class="six16">
+            <h2>TOP SELLING</h2>
+        </div>
+        <div class="six17">
+            <ul class="main">
+                <li class="list one1">Laptops
+                    <div class="dropdown"></div>
+                </li>
+                <li class="list">Smartphones
+                    <div class="dropdown1"></div>
+                </li>
+                <li class="list">Cameras
+                    <div class="dropdown1"></div>
+                </li>
+                <li class="list">Accessories
+                    <div class="dropdown1"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="animation">
+        <div class="slider">
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product09.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product05.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product03.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product08.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product05.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product06.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product07.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="ten1">
+                    <img class="ten2" src="./images/product08.png" alt="">
+                </div>
+                <p class="ten3">CATEGORY</p>
+                <h4 class="ten4">PRODUCT NAME GOES HERE</h4>
+                <span class="ten5"><b class="ten6">$980.00</b> $990.00</span>
+                <div class="ten7">
+                    <div class="ten8"></div>
+                    <div class="ten9">
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star star1" style="color: #b90404;"></i>
+                        </div>
+                    </div>
+                    <div class="ten10"></div>
+                </div>
+                <div class="ten11">
+                    <div class="ten12">
+                        <i class="fa-regular fa-heart" style="color: #050505;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-arrow-right-arrow-left" style="color: #050506;"></i>
+                    </div>
+                    <div class="ten12">
+                        <i class="fa-solid fa-eye" style="color: #050505;"></i>
+                    </div>
+                </div>
+                <div class="slidedrop">
+                    <div class="ten15">
+                        <p class="ten16">ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section4">
+        <div class="layout1">
+            <div class="slidder1">
+                <div class="sliddes">
+                    <h3>TOP SELLING</h3>
+                    <div class="box">
+                        <div class="box1"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box12"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box13"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sliddes">
+                    <h3>TOP SELLING</h3>
+                    <div class="box">
+                        <div class="box1"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box12"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box13"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout2">
+            <div class="slidder1">
+                <div class="sliddes">
+                    <h3>TOP SELLING</h3>
+                    <div class="box">
+                        <div class="box1"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box12"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box13"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sliddes">
+                    <h3>TOP SELLING</h3>
+                    <div class="box">
+                        <div class="box1"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box12"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box13"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout3">
+            <div class="slidder1">
+                <div class="sliddes">
+                    <h3>TOP SELLING</h3>
+                    <div class="box">
+                        <div class="box1"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box12"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box13"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sliddes">
+                    <h3>TOP SELLING</h3>
+                    <div class="box">
+                        <div class="box1"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box12"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box13"></div>
+                        <div class="box2">
+                            <p class="tex1">CATEGORY</p>
+                            <h3 class="tex2">PRODUCT NAME GOES HERE</h3>
+                            <span class="tex3"><b class="tex4">$980.00</b>$990.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="for1"></div>
+    <div class="for2">
+        <div class="for7">
+            <div class="for3">
+                <p class="for6">Sign Up for the <b> NEWSLETTER</b></p>
+            </div>
+            <div class="for4">
+                <input class="for8" type="text" placeholder="Enter Your Email">
+                <div class="for9">
+                    <h4 class="for10"><i class="fa-solid fa-envelope" style="color: #fafafa;"></i> Subscribe</h4>
+                </div>
+            </div>
+            <div class="for5">
+                <div class="for11">
+                    <i class="fa-brands fa-facebook-f" style="color: #363636;"></i>
+                </div>
+                <div class="for11">
+                    <i class="fa-brands fa-twitter" style="color: #404040;"></i>
+                </div>
+                <div class="for11">
+                    <i class="fa-brands fa-instagram" style="color: #3c3d3e;"></i>
+                </div>
+                <div class="for11">
+                    <i class="fa-brands fa-pinterest-p" style="color: #444546;"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="for12"></div>
+    <div class="for13">
+        <div class="for14">
+            <div class="for20">
+                <div class="for16">
+                    <h2 class="for21">ABOUT US</h2>
+                    <p class="for22">Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit, sed do <br> eiusmod
+                        tempor incididunt ut</p>
+                    <div class="for23">
+                        <p class="for24"> <i class="fa-solid fa-location-dot" style="color: #f0000c;"></i> 1734
+                            Stonecoal Road</p>
+                    </div>
+                    <div class="for23">
+                        <p class="for24"><i class="fa-solid fa-phone" style="color: #eb0017;"></i> +021-95-51-84</p>
+                    </div>
+                    <div class="for23">
+                        <p class="for24"><i class="fa-regular fa-envelope" style="color: #e0000b;"></i> email@email.com
+                        </p>
+                    </div>
+                </div>
+                <div class="for17">
+                    <h2 class="for21">CATEGORIES</h2>
+                    <ul>
+                        <li class="for25">Hot deals</li>
+                        <li class="for25">Laptops</li>
+                        <li class="for25">Smartphones</li>
+                        <li class="for25">Cameras</li>
+                        <li class="for25">Accessories</li>
+                    </ul>
+                </div>
+                <div class="for18">
+                    <h2 class="for21">INFORMATION</h2>
+                    <ul>
+                        <li class="for25">About Us</li>
+                        <li class="for25">Contact Us</li>
+                        <li class="for25">Privacy Policy</li>
+                        <li class="for25">Orders and Returns</li>
+                        <li class="for25">Terms & Conditions</li>
+                    </ul>
+                </div>
+                <div class="for19">
+                    <h2 class="for21">SERVICE</h2>
+                    <ul>
+                        <li class="for25">My Account</li>
+                        <li class="for25">View Cart</li>
+                        <li class="for25">Wishlist</li>
+                        <li class="for25">Track My Order</li>
+                        <li class="for25">Help</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="for15">
+            <div class="for27">
+                <div class="for28">
+                    <span class="for29">Copyright ©2023 All rights reserved | This template is made with <i
+                            class="fa-regular fa-heart" style="color: #e8e8e8;"></i> by <a
+                            class="for30">Colorlib</a></span>
+                </div>
+            </div>
+            <div class="for26"></div>
+        </div>
+    </div>
+</body>
+
+</html>
